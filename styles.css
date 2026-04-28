@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8d7d7d;
+}
+
+/*Header*/
+h1 {
+    font-size: 2.5rem;
+    color: #3f0d0d;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+/*Main*/
+/* Base style for all lights (the "Off" state) */
+.light {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  background-color: #222; /* Dark grey when off */
+  color: rgba(255, 255, 255, 0.2); /* Dim text */
+  transition: all 0.3s ease;
+}
+
+/* Active states: triggered by JavaScript */
+#red.active {
+  background-color: #ff0000;
+  box-shadow: 0 0 30px #ff0000;
+  color: rgba(0, 0, 0, 0.897);
+}
+
+#yellow.active {
+  background-color: #ffcc00;
+  box-shadow: 0 0 30px #ffcc00;
+  color: black;
+}
+
+#green.active {
+  background-color: #00ff00;
+  box-shadow: 0 0 30px #00ff00;
+  color: rgb(0, 0, 0);
+}
+
+.traffic-light {
+    width: 100px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+/*Lights Particulars*/
+.traffic-light .light-red {
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0 0 20px red;
+    height: 80px;
+    width: 80px;
+}
+
+
+
+.traffic-light .light-yellow {
+    background-color: yellow;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0 0 20px yellow;
+    height: 80px;
+    width: 80px;
+}
+
+
+
+.traffic-light .light-green {
+    background-color: green;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0 0 20px green;
+    height: 80px;
+    width: 80px;
+}
+
+/*Pedestrian Override*/
+.controls {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#cross-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#cross-btn:active {
+  transform: scale(0.95);
+}
+
+.walk-signal {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #721c24; /* Reddish "Wait" color */
+}
+
+.walk-signal.walk {
+  color: #155724; /* Greenish "Walk" color */
+}
